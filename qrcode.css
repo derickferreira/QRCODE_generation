@@ -15,9 +15,11 @@ body, html {
     background: #F2E8DF;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 main {
+    height: 260px;
     width: 400px;
     background: #efefef;
     flex-direction: column;
@@ -25,6 +27,36 @@ main {
     border-radius: 1rem;
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
     align-items: center;
+    transition: all .3s ease-in-out;
+}
+
+h1 {
+    animation-name: changeColors;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+}
+
+@keyframes changeColors {
+    0% {
+        color: #86A69D;
+    }
+
+    25% {
+        color: #F2B263;
+    }
+
+    50% {
+        color: #8C2641;
+    }
+
+    75% {
+        color: #F2C6C2;
+    }
+
+    100% {
+        color: #F28585;
+    }
 }
 
 header {
@@ -37,7 +69,6 @@ header {
 
 header p {
     color: #000;
-
 }
 
 header .bi-qr-code-scan {
@@ -49,7 +80,7 @@ form {
     flex-direction: column;
     align-items: center;
     margin-bottom: 1rem;
-    gap: 1.1rem;
+    gap: 1.5rem;
 }
 
 form input[type="text"] {
@@ -86,4 +117,14 @@ form input[type="submit"]:active {
 #qr_code_img {
     padding: 2rem;
     box-shadow: rgba(67, 71, 85, 1.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.container.active #qr_code_img {
+    opacity: 1;
+} 
+
+.container.active {
+    height: 500px;
 }
