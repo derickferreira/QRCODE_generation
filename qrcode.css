@@ -130,9 +130,14 @@ form input[type="submit"]:active {
 }
 
 #download_button {
+    opacity: 0;
+}
+
+.container.active #download_button {
     padding: 1rem;
     width: 100%;
     text-align: right;
+    opacity: 1;
 }
 
 #download_button button {
