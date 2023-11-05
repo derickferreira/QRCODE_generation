@@ -32,4 +32,4 @@ inputURL.addEventListener("keyup", (e) => {
     main.classList.remove("active");
     buttonURL.value = "Generate QR Code"
   }
-});
+});5

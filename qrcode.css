@@ -126,5 +126,32 @@ form input[type="submit"]:active {
 } 
 
 .container.active {
-    height: 500px;
+    height: 570px;
+}
+
+#download_button {
+    padding: 1rem;
+    width: 100%;
+    text-align: right;
+}
+
+#download_button button {
+    padding: .5rem 1rem;
+    border: none;
+    background: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+#download_button button i {
+    font-size: 1.3rem;
+}
+
+#download_button button:hover {
+    transform: scale(1.09);
+}
+
+#download_button button:active {
+    transform: scale(.96);
 }
